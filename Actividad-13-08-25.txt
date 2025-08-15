@@ -1,0 +1,73 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+
+
+// Documentacion para cosas mas interesantes 
+fun main() {
+    var arreglo list<Int> = listOf(2, 3, 4, 5, 6);
+    var arreglo_rapido: Array<Int> = arrayof(1, 2, 3, 4, 5);
+    var contiuar_ejecucion_del_juego = true
+    
+    var edad = 10;
+    
+    if(edad > 20){
+        print("Mayor de edad")
+    }
+    
+    else if(edad > 14){
+        print("No es moyor de edad pero si adolesente")
+    }
+    
+    else if(edad > 10){
+        print("No es moyor de edad pero si un puberto")
+    }
+    
+    else{
+        print("No es mayor de edad")
+    }
+    
+    while(continuar_con_ejecucion_del_Juego){
+        if(respuesta_usuario == "salir"){
+        continuar_con_ejecucion_del_Juego = false
+        }
+    }
+    
+    while(true){
+        if(respuesta_usuario == "salir"){
+            break
+        }
+        
+    for (numero in arreglo{
+        println("El numero es {numero}")
+    }
+    
+    for (numero in arreglo_rapido{
+        println("El numero es {numero}")
+    }
+         
+         
+     var entrada = "Salir";
+         when(entada){
+             "salir" ->{
+                 print("El usuario escribio salir")
+             }
+             
+             "opcion a","opcion b"->{
+                 //Codigo a ejecutar
+             }
+             
+            else -> {
+                print("Esta linea se ejecuta de forma automatica")
+            }
+         }
+     //Primero devemos seleccionar un numeor aleatorio del rango valido(0-100)
+     //Creamos y almasenadmos la variable de intento que inicia en 0
+     //Despues damos las instrucciones al usuario del juego
+     //Pedimos un numero entre el rango valido
+     //Validamos que sea un numero
+     //Validamos que este dentro del rango
+     //
+    }
+}

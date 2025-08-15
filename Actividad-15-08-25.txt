@@ -1,0 +1,36 @@
+/******************************************************************************
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+fun main() {
+    //var respuesta = readln();
+    var respuesta = validar_numero_de_entrada();
+    //var respuesta_numero = respuesta.toIntOrNull()
+    //print(respuesta_numero)
+    
+    print("Tu numro fue: ${respuesta}");
+}
+
+fun validar_numero_de_entrada(): Int{
+    var respuesta: String? = null
+    var respuesta_valida: Int? = null;
+    print("Por favor introduce un numero sin punto decimal: ");
+    while (true){
+        respuesta = readlnOrNull();
+        if(respuesta  == null){
+            print("No se que intentas hacer, por favor vuelve a intentando de nuevo. :");
+            continue;
+        }
+        respuesta_valida = respuesta!!.toIntOrNull();
+        if(respuesta_valida  == null){
+                print("Eso que introducistes no lo puedo leer, por favor cambialo por otro. :");
+        }
+        else{
+            return respuesta_valida!!;
+        }
+    }
+    return 0;
+}
