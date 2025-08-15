@@ -1,0 +1,71 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+  /* 5 variables implícitas (tipo inferido por Kotlin)
+   * 
+    Las Variables implícitas de diferentes tipos se declaran con var 
+    sin especificar el tipo de dato. Pero en Kotlin infiere automáticamente 
+    el tipo según el valor asignado. Son útiles cuando el tipo es obvio 
+    y no es necesario escribirlo, lo que hace el código más limpio además 
+    de eso se puede cambiar su valor después.
+    */
+    
+    var nombre = "Arturo"           // String
+    var edad = 22                  // Int
+    var altura = 1.75               // Double
+    var esEstudiante = true         // Boolean
+    var inicial = 'A'               // Char
+
+    /* 5 variables explícitas
+     * 
+     * Las Variables explícitas se declaran con var especificando el tipo 
+     * (: TipoDeDato). Nos sirven cuando quieres que el compilador y otros 
+     * programadores sepan exactamente qué tipo tendrá la variable, incluso 
+     * si el valor inicial es ambiguo. También se usan cuando la variable 
+     * se va a inicializar después y Kotlin no podría inferir el tipo 
+     * automáticamente y además se pueden modificar.
+     * */
+    
+    var ciudad: String = "Chihuahua"
+    var añoNacimiento: Int = 2002
+    var temperatura: Float = 36.5f
+    var peso: Double = 85.8
+    var calificacion: Char = 'B'
+
+    /* 5 constantes implícitas
+     * 
+     * Los Constantes de tipo implícito se declaran con val sin especificar 
+     * el tipo.Kotlin infiere el tipo según el valor inicial. Dichas constancias 
+     * son inmutables es decir no puedes cambiarles el valor después de asignarlo. 
+     * En los Constantes de tipo implícito se usan para valores que no cambian en 
+     * toda la ejecución del programa, pero que no necesitas declarar con un tipo explícito.
+     */
+    val pais = "México"             // String
+    val pi = 3.1416                  // Double
+    val maxVelocidad = 120           // Int
+    val gravedad = 9.81              // Double
+    val estaActivo = false           // Boolean
+
+    /* 5 constantes explícitas
+     * 
+     * Los Constantes de tipo explícito de diferentes tipos se declaran con val y el
+     * tipo explícito (: TipoDeDato). Son inmutables, como las constantes implícitas, 
+     * pero aquí forzamos el tipo para mayor claridad o compatibilidad con funciones
+     * que requieren un tipo específico. Son útiles cuando el valor podría ser ambiguo
+     * o cuando quieres dejar claro a otros programadores qué tipo tendrá siempre.
+    */
+    val continente: String = "América"
+    val diasSemana: Int = 7
+    val moneda: String = "Peso"
+    val versionSistema: Double = 1.0
+    val letraEspecial: Char = '#'
+
+    // Imprimiendo los datos para verificarlos
+    println("Nombre: $nombre, Edad: $edad, Altura: $altura, Estudiante: $esEstudiante, Inicial: $inicial")
+    println("Ciudad: $ciudad, Año Nacimiento: $añoNacimiento, Temp: $temperatura, Peso: $peso, Calificación: $calificacion")
+    println("País: $pais, Pi: $pi, Velocidad Máx: $maxVelocidad, Gravedad: $gravedad, Activo: $estaActivo")
+    println("Continente: $continente, Días Semana: $diasSemana, Moneda: $moneda, Versión: $versionSistema, Carácter: $letraEspecial")
+    
+}

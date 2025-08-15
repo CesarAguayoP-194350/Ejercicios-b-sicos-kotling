@@ -1,0 +1,37 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+/*
+ * 
+ * */
+fun main() {
+   /* println("Hello, world!!!");
+    var nombre: Int?; //
+    var edad: Int = 10;
+	var impuesto_IVA: Int = 16; //
+    var hora: string = "16.6";
+    // var hora: Double = 16.6
+    hora = "las tres en punto"
+    
+    //var esta_vivo_el_gato_de_schrodinger: Boolean?;*/
+    
+    val nombre: String = "Pedro";
+    
+    var edad: Int? = null;
+    val mayoria_de_edad = 18;
+    
+    //println("${nombre}: ${if(!edad > mayoria_de_edad)){"NO"} else {} es mayor de edad}")
+    
+    println("${edad ?: 0}: es el valor actual de edad")
+
+    
+    if (edad ?: 0 > mayoria_de_edad){
+        println("${nombre} es mayor de edad")
+    }
+    
+    else{
+        println("No es mayor de edad")
+    }
+    
+}
