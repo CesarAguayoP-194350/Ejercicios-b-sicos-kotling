@@ -1,0 +1,78 @@
+/******************************************************************************
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+data class Carrera(val nombre: String, val instituto: String)
+
+class Poder(val nombre : String){
+    fun puede_volar(): String{
+        return("En efecto puede volar")
+    }
+}
+
+class Estudiante(
+    val matricula: Int,
+    val nombre: String,
+
+    val carrera: Carrera,
+    //val instituto: String,
+        val apellidos: String = "No tiene xadres",
+    val correo_de_contacto: String = "Ni en su casa lo conosen",
+    val poderes: List<Poder> = emptyList(),
+){
+    fun obtener_correo(alumnos: String = "nombre secundario"): String{
+        return "al${matricula}@alumnos.uacj.mx"
+    }
+    
+    fun duplicar(): Estudiante{
+        return Estudiante(matricula, nombre, carrera, apellidos, correo_de_contacto)
+    }
+    
+}
+    
+fun main(){
+    val ddmi: Carrera = Carrera("Diseño digital en Medios Interactivos", "IADA")
+    val diseño = ddmi.copy()
+    val estudiante_1 = Estudiante(123456, "Merengan", ddmi, "Morfenger", "Zoka07325@gmail,com")
+        val estudiante_2 = estudiante_1.duplicar()
+        val estudiante_3 = estudiante_1
+        
+        if(ddmi == diseño){
+            print("Son el mismo objeto")
+        }
+        
+        else{
+            print("Son diferentes")
+        }
+        
+        
+        /*
+        if(estudiante_1 == estudiante_3){
+            print("Son el mismo objeto")
+        }
+        
+        else{
+            print("Son diferentes")
+        }
+        
+        if(estudiante_2 == estudiante_3){
+            print("Son el mismo objeto")
+        }
+        
+        else{
+            print("Son diferentes")
+        }
+        */
+        
+    print("El correo de ${estudiante_1.nombre} es ${estudiante_1.obtener_correo()} ")
+    }
+    
+    /*
+    ACTIVIDAD:
+    
+    pelicula favorita y agarar los objeros que lo representa y los registtas como si fueran un dato de programamcion.
+    Osea que hay que volver a hacer esto pero que este mas espesifico al tema de regustro.
+    */
